@@ -4,6 +4,7 @@ def create_board():
     '''
     (None) -> List(List(str))
     Create 6x7 board comprising 2D nested list. Slots are empty " " strings.
+    Dimensions are configurable.
     '''
     board = []
     for i in range(6):
@@ -157,6 +158,10 @@ def check_board_full(board):
                 return False
     return True
 
+'''
+This program is configurable. Different board sizes can be set, and there can be more than 2 players.
+'''
+
 def play_game():
     '''
     Game loop.
@@ -164,7 +169,7 @@ def play_game():
     # Initialize board. Starting player = "X"
     board = create_board()
     print_board(board)
-    players = ["X", "O"]
+    players = ["X", "O"] # Configurable
     count = 0
     current_player = players[count]
 
